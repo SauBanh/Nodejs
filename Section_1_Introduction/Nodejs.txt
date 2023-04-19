@@ -1,0 +1,1 @@
+Ndoejs cho phép chạy javascript không chỉ trong trình duyệt mà ở bất kỳ nơi nào khác như một ngôn ngữ lập trình thông thường
