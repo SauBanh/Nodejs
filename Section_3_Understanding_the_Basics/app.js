@@ -1,11 +1,12 @@
 const http = require("http");
-
+const fs = require("fs");
 // function rqListener(req, res){
 
 // }
 
 const server = http.createServer((req, res) => {
     const url = req.url;
+    const method = req.method;
     if (url === "/") {
         res.write("<html>");
         res.write("<head><title>Enter Message</title></head>");
@@ -15,8 +16,12 @@ const server = http.createServer((req, res) => {
         res.write("</html>");
         return res.end();
     }
-    console.log(req.url, req.method, req.headers);
-    // process.exit();
+    if (url === "/message" && method === "POST") {
+        fs.writeFileSync("message.txt", "Nguyễn Tuấn Anh đẹp trai");
+        res.statusCode = 302;
+        res.setHeader("Location", "/");
+        return res.end();
+    }
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
     res.write("<head><title>Tuấn Anh đẹp trai</title></head>");
