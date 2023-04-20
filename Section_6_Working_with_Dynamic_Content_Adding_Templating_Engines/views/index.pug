@@ -1,0 +1,6 @@
+extends layouts/main-layout
+
+block content
+    form(action="/add-user", method="POST") 
+        input(type="text", name="username", required, placeholder="add user...")
+        button(type="submit") Add user
