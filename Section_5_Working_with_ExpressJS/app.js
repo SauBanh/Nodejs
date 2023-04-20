@@ -17,8 +17,8 @@ const app = express(); // dùng app để chạy express dưới dạng hàm
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use("/admin", adminRouter);
 app.use(shopRouter);
-app.use(adminRouter);
 
 // app.use("/", (req, res, next) => {
 //     // console.log('This always run');
