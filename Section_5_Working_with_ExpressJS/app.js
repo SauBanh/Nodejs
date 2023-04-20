@@ -19,7 +19,7 @@ const app = express(); // dùng app để chạy express dưới dạng hàm
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/admin", adminRouter);
+app.use("/admin", adminRouter.routers);
 app.use(shopRouter);
 
 // app.use("/", (req, res, next) => {
