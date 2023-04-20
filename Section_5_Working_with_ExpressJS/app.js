@@ -16,6 +16,9 @@ const bodyParser = require("body-parser");
 // const server = http.createServer(routes.handler);
 const app = express(); // dùng app để chạy express dưới dạng hàm
 
+app.set("view engine", "pug");
+app.set("views", "views");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
