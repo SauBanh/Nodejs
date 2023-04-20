@@ -11,5 +11,14 @@ const express = require("express"); //đặt biến cho thư viện
 // const server = http.createServer(routes);
 // const server = http.createServer(routes.handler);
 const app = express(); // dùng app để chạy express dưới dạng hàm
-const server = http.createServer();
+app.use((req, res, next) => {
+    console.log('I"m Sáu Bảnh');
+    next();
+});
+
+app.use((req, res, next) => {
+    console.log('I"m Tuấn Anh');
+});
+
+const server = http.createServer(app);
 server.listen(5657);
