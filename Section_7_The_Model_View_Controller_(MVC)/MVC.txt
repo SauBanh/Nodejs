@@ -1,0 +1,5 @@
+model là các đối tượng chịu trách nhiệm đại diện cho dữ liệu của bạn trong mã cho phép làm việc trong dữ liệu của mình mà các dữ liệu hiển thị sẽ được điều hành bởi models
+view là những nội dụng được nhìn thấy cuối cùng trong tài liệu html và được kết nối giữa model và các chế độ xem không liên quan đến logic
+ứng dụng
+controller kết nôi với models và views thực hiện các logic ứng dụng lưu tìm và nạp dữ liệu và nó chưa logic ở giữa được hiện thị thông qua
+các routes
