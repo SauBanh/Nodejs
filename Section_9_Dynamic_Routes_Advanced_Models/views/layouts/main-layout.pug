@@ -1,0 +1,231 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&family=Roboto:wght@300;400&display=swap")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css", integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==", crossorigin="anonymous",referrerpolicy="no-referrer")
+        link(rel="stylesheet", href="/css/base.css")
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/grid.css")
+        link(rel="stylesheet", href="/css/responsive.css")
+        link(rel="shortcut icon", href="/img/favicon.png", type="image/png")
+        block style
+    body 
+        .app 
+            header.header
+                .grid.wide
+                    nav.header_navbar.hide-on-mobile-table
+                        ul.header_navbar-list
+                            li.header_navbar-item.header_navbar-item-qr.header_navbar-item--senparate Nguyễn Tuấn Anh Web Developer
+                                .header_qr
+                                    img.header_qr-img(src='/img/qrcode.png' alt='Download QR')
+                                    .header_qr--apps
+                                        a.header_qr-link(href='')
+                                            img.header_qr-download-img(src='/img/lg1.png' alt='Google play')
+                                        a.header_qr-link(href='')
+                                            img.header_qr-download-img(src='/img/lg2.png' alt='App store')
+                            li.header_navbar-item
+                                span.header_navbar-title--no-pointer kết nối
+                                a.header_navbar-icon-link(href='')
+                                    i.header_navbar-icon.fa-brands.fa-facebook
+                                a.header_navbar-icon-link(href='')
+                                    i.header_navbar-icon.fa-brands.fa-instagram
+                        ul.header_navbar-list
+                            li.header_navbar-item.header_navbar-item-has-notify
+                                a.header_navbar-item-link(href='')
+                                    i.header_navbar-icon.fa-regular.fa-bell
+                                    | Thông báo
+                                .header_notify
+                                    header.header_notify-header
+                                        h3 Thông báo mới nhất
+                                    ul.header_notify-list
+                                        li.header_notify-item.header_notify-item-viewed
+                                            a.header_notify-link(href='')
+                                                img.header_notify-img(src='/img/app3.png' alt='')
+                                                .header_notify-info
+                                                    span.header_notify-name Balo thời trang
+                                                    sppan.header_notify-discriotion Balo thời trang dành mang phong cách trẻ trung
+                                        li.header_notify-item.header_notify-item-viewed
+                                            a.header_notify-link(href='')
+                                                img.header_notify-img(src='/img/app4.png' alt='')
+                                                .header_notify-info
+                                                    span.header_notify-name Kem làm trắng da
+                                                    sppan.header_notify-discriotion Kem làm trắng da phù hợp cho tất cả loại da
+                                        li.header_notify-item.header_notify-item-viewed
+                                            a.header_notify-link(href='')
+                                                img.header_notify-img(src='/img/app5.png' alt='')
+                                                .header_notify-info
+                                                    span.header_notify-name Kệ sách treo tường
+                                                    sppan.header_notify-discriotion Kệ sách treo tường thời trang
+                                        li.header_notify-item
+                                            a.header_notify-link(href='')
+                                                img.header_notify-img(src='/img/app6.png' alt='')
+                                                .header_notify-info
+                                                    span.header_notify-name Notebook
+                                                    sppan.header_notify-discriotion Sách ghi chú dùng để ghi lại những thông tin quan trọng đẹp đẽ thời trang
+                                        li.header_notify-item
+                                            a.header_notify-link(href='')
+                                                img.header_notify-img(src='/img/app7.png' alt='')
+                                                .header_notify-info
+                                                    span.header_notify-name Bút bi
+                                                    sppan.header_notify-discriotion Bút bị mực xanh
+                                    footer.header_notify-footer
+                                        a.header_notify-footer-btn(href='') Xem tất cả
+                            li.header_navbar-item
+                                a.header_navbar-item-link(href='')
+                                    i.header_navbar-icon.fa-regular.fa-circle-question
+                                    | Trợ giúp
+                            //
+                            //- <li class="header_navbar-item header_navbar-item--strong header_navbar-item--senparate">Đăng ký</li>
+                            //- <li class="header_navbar-item header_navbar-item--strong">Đăng nhập</li>
+                            li.header_navbar-item.header_navbar-user
+                                img.header_navbar-user-img(src='/img/avata.jpg' alt='')
+                                span.header_navbar-user-name Nguyễn Tuấn Anh
+                                ul.header_navbar-user-menu
+                                    li.header_navbar-user-item
+                                        a(href='/admin/products') Danh sách sản phẩm
+                                    li.header_navbar-user-item
+                                        a(href='/admin/add-product') Thêm sản phẩm
+                                    li.header_navbar-user-item
+                                        a(href='') Tài Khoản của tôi
+                                    li.header_navbar-user-item
+                                        a(href='') Địa chỉ của tôi
+                                    li.header_navbar-user-item
+                                        a(href='') Đơn mua
+                                    li.header_navbar-user-item.header_navbar-user-item-separate
+                                        a(href='') Đăng xuất
+                    // header width search
+                    .header-with-search
+                        label.header_mobile-search(for='mobile-search-checkbox')
+                            i.header_mobile-search-icon.fa-solid.fa-magnifying-glass
+                        .header_logo
+                            .header_logo-img
+                            a.header_logo-link(href='/')
+                                img(src='/img/logo.png' alt='')
+                        input#mobile-search-checkbox.header_search-checkbox(type='checkbox' hidden='')
+                        .header_search
+                            .header_search-input-wrap
+                                input.header_search-input(type='text' placeholder='Nhập để tìm kiếm sản phẩm')
+                                // search history
+                                .header_search-history
+                                    h3.header_search-history-heading Lịch sử tìm kiếm
+                                    ul.header_search-history-list
+                                        li.header_search-history-item
+                                            a(href='') Điện thoại samsung galaxy s21 ultra
+                                        li.header_search-history-item
+                                            a(href='') iPhone 12 Pro Max 128Gb
+                            .header_search-select
+                                span.header_search-select-lable Trong shop
+                                i.header_search-select-icon.fa-solid.fa-angle-down
+                                ul.header_search-option
+                                    li.header_search-option-item
+                                        span Trong shop
+                                        i.fa-solid.fa-check
+                                    li.header_search-option-item
+                                        span Ngoài shop
+                                        i.fa-solid.fa-check
+                            button.header_search-btn
+                                i.header_search-btn-icon.fa-solid.fa-magnifying-glass
+                        .header_cart
+                            .header_cart-warp
+                                i.header_cart-icon.fa-solid.fa-cart-shopping
+                                span.header_cart-notice #{totalProducts}
+                                .header_cart-list
+                                    if cart.length > 0        
+                                        h4.header_cart-heading Sản phẩm đã thêm
+                                            ul.header_cart-list-item
+                                                each product in cart
+                                                    // cart item
+                                                    li.header_cart-item
+                                                        img.header_cart-img(src=product.productData.imgUrl alt='')
+                                                        .header_cart-item-info
+                                                            .header_cart-item-head
+                                                                h5.header_cart-item-name #{product.productData.title}
+                                                                .header_cart-item-price-wrap
+                                                                    span.header_cart_item_old_price #{(product.productData.price).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                                                    span.header_cart-item-price #{(product.productData.price * (1 - (product.productData.discount/100))).toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                                                    span.header_cart-item-multiply x
+                                                                    span.header_cart-item-qnt #{product.qty}
+                                                            .header_cart-item-body
+                                                                span.header_cart-item-description Phân loại: #{product.productData.type}
+                                                                form(action="/cart-delete", method="post") 
+                                                                    input(type="hidden", name="productId", value=product.productData.id)
+                                                                    button.header_cart-item-remove(type="submit") Xóa                                            
+                                            .header_cart-view-cart
+                                                span Tổng số tiền: #{totalPrice.toLocaleString('vi-VN', {style: 'currency', currency: 'VND', minimumFractionDigits: 0, maximumFractionDigits: 0}).replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+                                                a.btn.btn-primary.btn-hover(href='/cart') Xem giỏ hàng
+                                    else 
+                                        img.header_cart-list--no-cart-img(src='/img/no_cart.png' alt='')
+                                        p.header_cart-list-no-cart-msg Chưa có sản phẩm
+                ul.header_sort-bar
+                    li.header_sort-item
+                        a.header_sort-link(href='') Liên quan
+                    li.header_sort-item.header_sort-item-active
+                        a.header_sort-link(href='') Mới nhất
+                    li.header_sort-item
+                        a.header_sort-link(href='') Bán chạy
+                    li.header_sort-item
+                        a.header_sort-link(href='') Giá
+            .app_container
+                block content
+            footer.footer
+                .grid.wide.footer_content
+                    .row
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading CHĂM SÓC KHÁCH HÀNG
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='') Trung tâm trợ giúp
+                                li.footer-item
+                                    a.footer-item-link(href='') Sáu Bảnh đẹp trai Mail
+                                li.footer-item
+                                    a.footer-item-link(href='') Hướng dẫn mua hàng
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading GIỚI THIỆU
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='') Giới thiệu
+                                li.footer-item
+                                    a.footer-item-link(href='') Tuyển dụng
+                                li.footer-item
+                                    a.footer-item-link(href='') Điều khoản
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading Danh mục
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='') Trung tâm trợ giúp
+                                li.footer-item
+                                    a.footer-item-link(href='') Sáu Bảnh đẹp trai Mail
+                                li.footer-item
+                                    a.footer-item-link(href='') Hướng dẫn mua hàng
+                        .col.l-2-4.m-4.c-6
+                            h3.footer_heading Theo dõi
+                            ul.footer_list
+                                li.footer-item
+                                    a.footer-item-link(href='')
+                                        i.footer-item-icon.fa-brands.fa-facebook
+                                        | Facebook
+                                li.footer-item
+                                    a.footer-item-link(href='')
+                                        i.footer-item-icon.fa-brands.fa-instagram
+                                        | Instgram
+                                li.footer-item
+                                    a.footer-item-link(href='')
+                                        i.footer-item-icon.fa-brands.fa-linkedin
+                                        | Linkedin
+                        .col.l-2-4.m-8.c-12
+                            h3.footer_heading VÀO CỬA HÀNG TRÊN ỨNG DỤNG
+                            .footer_download
+                                img.footer_download-pr(src='/img/qrcode.png', alt='download QR')
+                                .footer_download-apps
+                                    a.footer_download-apps-link(href='')
+                                        img.footer_download-app-img(src='/img/lg1.png', alt='Google play')
+                                    a.footer_download-apps-link(href='')
+                                        img.footer_download-app-img(src='/img/lg2.png', alt='App store')
+                .footer_bottom
+                    .grid.wide
+                        p.footer_text ⓈⒷ-2022 Nguyễn Tuấn Anh Web Developer
