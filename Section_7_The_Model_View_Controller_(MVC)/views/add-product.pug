@@ -9,5 +9,5 @@ block content
             form.product-form(action="/admin/add-product", method="POST")
                 .form-control
                     label(for="title") Title
-                    input#title(type="text", name="title")
+                    input#title(type="text", name="title", required = true, placeholder="title")
                 button.btn(type="submit") Add product
